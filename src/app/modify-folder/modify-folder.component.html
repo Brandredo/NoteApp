@@ -1,0 +1,15 @@
+<form action="" (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="container">
+    <label for="folder"></label>
+    <input
+      type="number"
+      id="folder"
+      name="folder"
+      ngModel
+      placeholder="Enter Folder ID number"
+      min="0"
+    />
+  </div>
+
+  <button mat-flat-button color="accent" type="submit">Save</button>
+</form>

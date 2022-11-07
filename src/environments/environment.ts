@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  noteGet: '',
+  noteAdd: 'https://localhost:7178/Note/add',
+  notePut: 'https://localhost:7178/Note/update',
+  noteDelete: 'https://localhost:7178/Note/delete/',
+  noteGetAll: 'https://localhost:7178/Note/all',
+  folderEdit: '',
 };
 
 /*

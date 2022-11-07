@@ -1,0 +1,43 @@
+<div class="container">
+  <button mat-flat-button (click)="showForm()">Add</button>
+
+  <form *ngIf="showAddForm" class="form-box" (ngSubmit)="addNote()" #f="ngForm">
+    <div class="input-container">
+      <mat-form-field class="title" appearance="fill">
+        <mat-label for="title">Title</mat-label>
+        <input
+          matInput
+          ngModel
+          name="title"
+          type="text"
+          id="title"
+          placeholder="Title"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="text" appearance="fill">
+        <mat-label for="text">Title</mat-label>
+        <input
+          matInput
+          ngModel
+          name="text"
+          type="text"
+          id="text"
+          placeholder="Text"
+        />
+      </mat-form-field>
+      <button mat-flat-button color="accent" type="submit">Save</button>
+    </div>
+  </form>
+
+  <div *ngIf="notes.length != 0" class="showNotes">
+    <app-note
+      *ngFor="let n of notes"
+      [note]="n"
+      (deleted)="refreshNotes()"
+    ></app-note>
+  </div>
+  <div *ngIf="notes.length == 0" class="empty-box">
+    <h3>No notes available...</h3>
+  </div>
+</div>

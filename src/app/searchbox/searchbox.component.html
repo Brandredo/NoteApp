@@ -1,0 +1,13 @@
+<div class="container">
+  <mat-form-field class="text" appearance="fill">
+    <mat-label for="text">Search note</mat-label>
+    <input
+      #thisValue
+      (keyup)="startSearch(thisValue)"
+      matInput
+      type="text"
+      id="text"
+      placeholder="Enter note title"
+    />
+  </mat-form-field>
+</div>

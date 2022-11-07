@@ -1,0 +1,27 @@
+<mat-card class="card">
+  <!-- <i class="gg-profile"></i> -->
+  <div class="box-container">
+    <mat-card-title>{{ note.title }}</mat-card-title>
+    <mat-card-subtitle>{{ note.folderId }}</mat-card-subtitle>
+    <mat-card-content>{{ note.text }}</mat-card-content>
+
+    <mat-card-actions class="button-container">
+      <button mat-flat-button color="primary" (click)="edit()">Edit</button>
+      <button mat-flat-button color="warn" (click)="delete()">Delete</button>
+      <!-- <button mat-flat-button color="accent" (click)="editFolder()">
+        {{ note.folderId ? "Change Folder" : "Add Folder" }}
+      </button> -->
+    </mat-card-actions>
+
+    <app-modify-folder
+      *ngIf="showFolderForm"
+      (folderChanged)="modifyFolder($event)"
+    ></app-modify-folder>
+
+    <app-edit-form
+      (contentChange)="updateNote($event)"
+      *ngIf="showEditForm"
+      [currentNote]="note"
+    ></app-edit-form>
+  </div>
+</mat-card>

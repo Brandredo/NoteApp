@@ -1,0 +1,27 @@
+<form class="form-box" (ngSubmit)="onSubmit()" #f="ngForm">
+  <h3>Edit note:</h3>
+
+  <div class="title">
+    <label for="title">Title</label>
+    <input
+      ngModel
+      name="title"
+      type="text"
+      id="title"
+      placeholder="{{ currentNote.title }}"
+    />
+  </div>
+
+  <div class="text">
+    <label for="text">Text</label>
+    <input
+      ngModel
+      name="text"
+      type="text"
+      id="text"
+      placeholder="{{ currentNote.text }}"
+    />
+  </div>
+
+  <button mat-flat-button color="accent" type="submit">Save</button>
+</form>

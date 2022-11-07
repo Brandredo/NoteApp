@@ -1,0 +1,9 @@
+.container {
+  width: 50vh;
+  padding: 0.5em;
+  margin: 15vh auto 0;
+}
+
+.text {
+  width: 100%;
+}
