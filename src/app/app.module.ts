@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ModifyFolderComponent } from './modify-folder/modify-folder.component';
 import { MatInputModule } from '@angular/material/input';
 import { SearchboxComponent } from './searchbox/searchbox.component';
+import { ChangeColorOnHoverDirective } from './change-color-on-hover.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SearchboxComponent } from './searchbox/searchbox.component';
     NavbarComponent,
     ModifyFolderComponent,
     SearchboxComponent,
+    ChangeColorOnHoverDirective,
   ],
   imports: [
     BrowserModule,

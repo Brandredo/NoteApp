@@ -30,14 +30,19 @@
     </div>
   </form>
 
-  <div *ngIf="notes.length != 0" class="showNotes">
-    <app-note
-      *ngFor="let n of notes"
-      [note]="n"
-      (deleted)="refreshNotes()"
-    ></app-note>
-  </div>
-  <div *ngIf="notes.length == 0" class="empty-box">
-    <h3>No notes available...</h3>
+  <div [ngSwitch]="notes.length" class="">
+
+
+    <div *ngSwitchDefault="" class="showNotes">
+      <app-note
+        *ngFor="let n of notes"
+        [note]="n"
+        (deleted)="refreshNotes()"
+      ></app-note>
+    </div>
+    <div *ngSwitchCase="0" class="empty-box">
+      <h3>No notes available...</h3>
+    </div>
+
   </div>
 </div>
